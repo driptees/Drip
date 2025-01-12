@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Appeal Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #444;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Website is Under Development!</h1>
+        <p>We're working hard to bring you the best designs. For now, let us know:</p>
+        <p>Would you buy this T-shirt?</p>
+        <button onclick="showMessage('Yes! I would buy it!')">Yes</button>
+        <button onclick="showMessage('No, not my style.')">No</button>
+        <p class="message" id="response"></p>
+    </div>
+
+    <script>
+        function showMessage(message) {
+            document.getElementById('response').innerText = message;
+        }
+    </script>
+</body>
+</html>
