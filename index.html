@@ -49,10 +49,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Logo Upload Section -->
-        <input type="file" id="logoUpload" accept="image/*" onchange="previewLogo(event)">
-        <br>
-        <img id="logoPreview" class="logo" style="display:none;">
+        <!-- Load the logo from the GitHub repository -->
+        <img id="logo" class="logo" src="https://raw.githubusercontent.com/your-username/your-repo-name/main/Logo.png" alt="Logo">
         
         <h1>Our Website is Under Development!</h1>
         <p>We're working hard to bring you the best designs. For now, let us know:</p>
@@ -95,19 +93,6 @@
             getIpAddress().then(ip => {
                 sendDataToSheet(ip, message);
             });
-        }
-
-        // Function to preview the uploaded logo
-        function previewLogo(event) {
-            const logoPreview = document.getElementById('logoPreview');
-            const file = event.target.files[0];
-            const reader = new FileReader();
-            
-            reader.onload = function(e) {
-                logoPreview.src = e.target.result;
-                logoPreview.style.display = 'block'; // Show the logo once uploaded
-            }
-            reader.readAsDataURL(file);
         }
     </script>
 </body>
